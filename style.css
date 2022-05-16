@@ -18,6 +18,7 @@ html {
   font-family: "Manrope", sans-serif;
 }
 body {
+  position: relative;
   background-color: var(--lightorange);
 }
 
@@ -125,13 +126,8 @@ li {
 } */
 
 main {
-  position: relative;
   width: 100%;
   height: auto;
-}
-
-main.is-margin {
-  margin-bottom: 3em;
 }
 
 /* Side Bar */
@@ -232,6 +228,12 @@ textarea:focus {
   background-color: var(--darkpurple);
   padding: 1em;
   width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.footer.is-margin {
+  margin-top: 5em;
 }
 
 .copy-right {
