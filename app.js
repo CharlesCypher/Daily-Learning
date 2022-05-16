@@ -9,3 +9,5 @@ hamburger.addEventListener("click", function () {
   dropDown.classList.toggle("show");
   main.classList.toggle("is-margin");
 });
+
+let title = document.getElementById("titleBox").value;

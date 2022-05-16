@@ -231,6 +231,9 @@ textarea:focus {
 footer {
   background-color: var(--darkpurple);
   padding: 1em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .copy-right {
