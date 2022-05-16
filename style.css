@@ -232,8 +232,8 @@ footer {
   background-color: var(--darkpurple);
   padding: 1em;
   width: 100%;
-  position: absolute;
-  left: 0;
+  /* position: absolute;
+  left: 0; */
   bottom: 0;
 }
 
