@@ -11,11 +11,11 @@ hamburger.addEventListener("click", function () {
   footer.classList.toggle("is-margin");
 });
 
-let title = document.getElementById("titleBox");
+let title = document.getElementById("noteTitle");
 let note = document.querySelector(".notes");
 let submit = document.getElementById("submitBtn");
 submit.addEventListener("click", (e) => {
   e.preventDefault;
-  note.textContent = title;
-  console.log("clicked");
+  note.textContent = title.value;
+  console.log(title.value);
 });
