@@ -228,13 +228,10 @@ textarea:focus {
   border: 1px solid var(--lightpurple);
 }
 
-footer {
+.footer {
   background-color: var(--darkpurple);
   padding: 1em;
   width: 100%;
-  /* position: absolute;
-  left: 0; */
-  bottom: 0;
 }
 
 .copy-right {
