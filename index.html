@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="head-wrap">
+        <div class="app-name"><span>N</span><span>T</span></div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="drop-down">
+            <li><a href="index.html">Note Taker (NT)</a></li>
+            <li><a href="to-do.html">To-Do List (TDL)</a></li>
+            <li><a href="#">Count Down (CD)</a></li>
+          </div>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="side-bar">
+          <form action="" class="form" id="formBox">
+            <input type="text" id="noteTitle" placeholder="Title" />
+            <!-- <input type="color" name="" id="colorPick" /> -->
+            <input type="datetime-local" name="" id="localTime" />
+            <textarea
+              name=""
+              id="textArea"
+              cols="30"
+              rows="10"
+              placeholder="Write notes"
+            ></textarea>
+            <input type="button" value="save note" id="submitBtn" />
+          </form>
+        </div>
+      </main>
+      <section class="output">
+        <div class="notes"></div>
+      </section>
+    </div>
+    <footer><div class="copy-right">Designed by Coriz 2022&copy;</div></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

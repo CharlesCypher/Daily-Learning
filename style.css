@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+:root {
+  --lightbrown: #e09f7d;
+  --lightorange: #ef5d60;
+  --lightpink: #ec4067;
+  --lightpurple: #a01a7d;
+  --darkpurple: #311847;
+  --white: #fefefe;
+  --black: #040f0f;
+}
+
+*,
+html {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  background-color: var(--lightorange);
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightbrown);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+}
+
+.head-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--darkpurple);
+}
+
+.app-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 1em;
+}
+
+.app-name > span {
+  font-family: "Poppins", sans-serif;
+  color: var(--lightbrown);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  user-select: none;
+  appearance: none;
+  border: none;
+  background: none;
+  margin: 1em 2em;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: relative;
+  background-color: var(--white);
+  margin-bottom: 5px;
+  width: 2.2rem;
+  height: 0.25rem;
+  border-radius: 2px;
+  transform-origin: 0 0;
+}
+
+.drop-down {
+  display: none;
+  transform: translateY(0);
+  transition: all 0.4s ease-in;
+}
+
+.drop-down.show {
+  display: block;
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  border-radius: 4px;
+  width: 16rem;
+  height: auto;
+  background-color: var(--darkpurple);
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 6px 4px 5px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(10%);
+  transition: all 0.4s ease-in;
+  z-index: 1;
+}
+
+.drop-down li {
+  margin: 1em auto;
+}
+
+/* .drop-down::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--lightpurple);
+} */
+
+main {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+main.is-margin {
+  margin-bottom: 3em;
+}
+
+/* Side Bar */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightorange);
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 4em auto;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: var(--darkpurple);
+  transition: all 0.4s ease-in-out;
+}
+
+.form.is-active {
+  transform: translateY(20%);
+}
+
+input {
+  width: 90%;
+  margin: auto;
+  background-color: transparent;
+}
+
+input[type="text"] {
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  border: none;
+  border-bottom: 1px solid var(--white);
+  padding: 0.8em;
+  font-size: 1rem;
+  margin: 1em auto;
+  outline: none;
+  color: var(--white);
+  transition: all 0.2s ease-in;
+}
+
+input[type="button"] {
+  border: none;
+  background-color: var(--lightpurple);
+  padding: 0.8em;
+  font-size: 1.2rem;
+  margin: 1em auto;
+  outline: none;
+  color: var(--white);
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus {
+  border-bottom: 1px solid var(--lightpurple);
+}
+
+input[type="text"]::placeholder,
+input[type="datetime-local"]::placeholder {
+  text-transform: capitalize;
+  color: var(--white);
+  font-size: 18px;
+}
+
+textarea {
+  width: 90%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 1.5em auto;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  outline: none;
+  resize: none;
+  transition: all 0.2s ease-in-out;
+}
+
+textarea::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+textarea:focus {
+  border: 1px solid var(--lightpurple);
+}
+
+footer {
+  background-color: var(--darkpurple);
+  padding: 1em;
+}
+
+.copy-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: var(--white);
+}
