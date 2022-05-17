@@ -3,6 +3,7 @@ const hamburger = document.querySelector(".hamburger");
 const dropDown = document.querySelector(".drop-down");
 const form = document.getElementById("formBox");
 const main = document.querySelector(".main");
+const textArea = document.getElementById("textArea");
 const footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click", function () {
@@ -11,11 +12,12 @@ hamburger.addEventListener("click", function () {
   footer.classList.toggle("is-margin");
 });
 
-let title = document.getElementById("noteTitle");
-let note = document.querySelector(".notes");
+let titleInput = document.getElementById("title");
+let noteTitle = document.querySelector(".note-title");
+let noteBody = document.querySelector(".note-body");
 let submit = document.getElementById("submitBtn");
 submit.addEventListener("click", (e) => {
   e.preventDefault;
-  note.textContent = title.value;
-  console.log(title.value);
+  noteTitle.textContent = titleInput.value;
+  noteBody.textContent = textArea.value;
 });

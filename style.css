@@ -238,3 +238,29 @@ textarea:focus {
   align-items: flex-end;
   color: var(--white);
 }
+
+.output {
+  width: 90%;
+  height: auto;
+  margin: 2em auto;
+  border-radius: 4px 4px 0 0;
+  background-color: var(--darkpurple);
+}
+
+.note-title {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.note-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  margin: 0.3em auto;
+}
