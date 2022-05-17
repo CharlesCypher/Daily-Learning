@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 :root {
-  --lightbrown: #e09f7d;
-  --lightorange: #ef5d60;
-  --lightpink: #ec4067;
-  --lightpurple: #a01a7d;
-  --darkpurple: #311847;
+  --lightbrown: #f8f1ff;
+  --lightorange: #decdf5;
+  --lightpink: #534d56;
+  --lightpurple: #1b998b;
+  --darkpurple: #656176;
   --white: #fefefe;
   --black: #040f0f;
 }
@@ -74,10 +74,10 @@ li {
 .hamburger span {
   display: block;
   position: relative;
-  background-color: var(--white);
+  background-color: var(--lightbrown);
   margin-bottom: 5px;
   width: 2.2rem;
-  height: 0.25rem;
+  height: 0.27rem;
   border-radius: 2px;
   transform-origin: 0 0;
 }
@@ -99,7 +99,6 @@ li {
   width: 16rem;
   height: auto;
   background-color: var(--darkpurple);
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 6px 4px 5px 2px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -108,25 +107,11 @@ li {
   margin: 1em auto;
 }
 
-/* .drop-down::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 10%;
-  margin-top: -10px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid var(--lightpurple);
-} */
-
 main {
   width: 100%;
   height: auto;
 }
 
-/* Side Bar */
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -161,14 +146,14 @@ input[type="text"] {
 }
 
 input[type="text"],
-input[type="datetime-local"] {
+input[type="date"] {
   border: none;
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--lightorange);
   padding: 0.8em;
   font-size: 1rem;
   margin: 1em auto;
   outline: none;
-  color: var(--white);
+  color: var(--lightbrown);
   transition: all 0.2s ease-in;
 }
 
@@ -179,21 +164,20 @@ input[type="button"] {
   font-size: 1.2rem;
   margin: 1em auto;
   outline: none;
-  color: var(--white);
+  color: var(--lightbrown);
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
 input[type="text"]:focus,
-input[type="datetime-local"]:focus {
+input[type="date"]:focus {
   border-bottom: 1px solid var(--lightpurple);
 }
 
-input[type="text"]::placeholder,
-input[type="datetime-local"]::placeholder {
+input[type="text"]::placeholder {
   text-transform: capitalize;
-  color: var(--white);
+  color: var(--lightorange);
   font-size: 18px;
 }
 
@@ -204,15 +188,15 @@ textarea {
   margin: 1.5em auto;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid var(--white);
-  color: var(--white);
+  border: 1px solid var(--lightorange);
+  color: var(--lightbrown);
   outline: none;
   resize: none;
   transition: all 0.2s ease-in-out;
 }
 
 textarea::placeholder {
-  color: var(--white);
+  color: var(--lightorange);
   font-size: 1rem;
 }
 
@@ -236,7 +220,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: var(--white);
+  color: var(--lightorange);
 }
 
 .output {
@@ -254,6 +238,7 @@ textarea:focus {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .note-body {
