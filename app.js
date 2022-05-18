@@ -26,7 +26,7 @@ submit.addEventListener("click", () => {
 
   const titleNote = localStorage.getItem("title");
   noteTitle.textContent = titleNote;
-  noteBody.textContent = ta;
+  // noteBody.textContent = ta;
   if (nt && ta) {
     for (let i = 0; i < localStorage.length; i++) {
       const title = localStorage.key(i);
