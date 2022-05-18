@@ -162,7 +162,7 @@ input[type="search"] {
 }
 
 input[type="search"] {
-  width: 70%;
+  width: 90%;
   border: none;
   border: 1px solid var(--black);
   padding: 0.8em;
@@ -188,7 +188,7 @@ input[type="search"]:focus {
 
 .searchBtn {
   position: absolute;
-  right: 15%;
+  right: 5%;
   padding: 1em;
   font-size: 0.9rem;
   color: var(--white);
