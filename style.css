@@ -58,7 +58,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--darkpurple);
+  background-color: var(--white);
   position: fixed;
   width: 100%;
   top: 0;
@@ -137,7 +137,7 @@ main {
   margin: 4em auto;
   border-radius: 10px;
   padding: 1em;
-  background-color: var(--darkpurple);
+  background-color: var(--white);
   transition: all 0.4s ease-in-out;
 }
 
@@ -233,7 +233,7 @@ textarea:focus {
 }
 
 .footer {
-  background-color: var(--darkpurple);
+  background-color: var(--white);
   padding: 1em;
   width: 100%;
   position: absolute;
@@ -291,10 +291,7 @@ textarea:focus {
 @media screen and (min-width: 1024px) {
   main {
     display: flex;
-    width: 100%;
-    height: auto;
     margin-top: 6em;
-    background-color: var(--lightorange);
   }
 
   .side-bar {
@@ -331,9 +328,6 @@ textarea:focus {
   }
 
   .footer {
-    background-color: var(--darkpurple);
-    border-top: 1px solid var(--lightorange);
     padding: 0.9em;
-    width: 100%;
   }
 }
