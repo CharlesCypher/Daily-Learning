@@ -51,7 +51,7 @@ li {
   font-size: 2rem;
   font-weight: 700;
   color: var(--white);
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .app-name > span {
@@ -109,17 +109,19 @@ li {
 }
 
 main {
+  position: relative;
   width: 100%;
   height: auto;
+  background-color: var(--lightorange);
 }
-
+/* 
 .side-bar {
   display: flex;
   flex-direction: column;
-  background-color: var(--lightorange);
+
   width: 100%;
   height: auto;
-}
+} */
 
 .form {
   display: flex;
@@ -224,6 +226,11 @@ textarea:focus {
   color: var(--lightorange);
 }
 
+.output-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .output {
   width: 90%;
   height: auto;
@@ -262,4 +269,52 @@ textarea:focus {
 
 .display-block {
   display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--lightorange);
+  }
+
+  .form {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    margin: 2em 2em 0 0;
+  }
+
+  .form.is-active {
+    transform: translateY(0%);
+  }
+
+  .output-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .output {
+    width: 30%;
+    height: auto;
+    margin: 2em auto;
+    border-radius: 4px;
+    background-color: var(--darkpurple);
+  }
+
+  .footer {
+    background-color: var(--darkpurple);
+    padding: 1em;
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    /* margin-top: 10em; */
+    bottom: 0;
+  }
+
+  .footer.is-margin {
+    margin: 0;
+  }
 }
