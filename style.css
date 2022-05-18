@@ -240,7 +240,7 @@ textarea:focus {
 }
 
 .note-title {
-  padding: 1em 0 0 1em;
+  padding: 0.5em 0 0 1em;
   color: var(--white);
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
