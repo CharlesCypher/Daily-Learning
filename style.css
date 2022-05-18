@@ -16,7 +16,8 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
-  /* font-size: 62.5%; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   position: relative;
@@ -37,6 +38,7 @@ li {
 .app-container {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .head-wrap {
@@ -44,6 +46,10 @@ li {
   justify-content: space-between;
   align-items: center;
   background-color: var(--darkpurple);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .app-name {
@@ -109,18 +115,11 @@ li {
 }
 
 main {
-  position: relative;
   width: 100%;
   height: auto;
+  margin-top: 8em;
   background-color: var(--lightorange);
 }
-
-/* .side-bar {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  height: auto;
-} */
 
 .form {
   display: flex;
@@ -232,10 +231,6 @@ textarea:focus {
   left: 0;
 }
 
-.footer.is-margin {
-  margin-top: 5em;
-}
-
 .copy-right {
   display: flex;
   justify-content: center;
@@ -286,17 +281,26 @@ textarea:focus {
 
 @media screen and (min-width: 1024px) {
   main {
-    position: relative;
     display: flex;
     width: 100%;
     height: auto;
+    margin-top: 6em;
     background-color: var(--lightorange);
   }
 
+  .side-bar {
+    width: 36.5%;
+    height: auto;
+  }
+
   .form {
-    width: 100%;
-    border-radius: 0 10px 10px 0;
+    position: fixed;
+    top: 9.65%;
+    left: 0;
+    width: 30%;
+    border-radius: 0;
     margin: 2em 2em 0 0;
+    border-top: 1px solid var(--lightorange);
   }
 
   .form.is-active {
@@ -311,23 +315,16 @@ textarea:focus {
 
   .output {
     width: 30%;
-    height: auto;
-    margin: 2em auto;
-    border-radius: 4px;
-    background-color: var(--darkpurple);
+  }
+
+  .space {
+    margin: 0.7em;
   }
 
   .footer {
     background-color: var(--darkpurple);
-    padding: 1em;
+    border-top: 1px solid var(--lightorange);
+    padding: 0.9em;
     width: 100%;
-    position: absolute;
-    /* left: 0; */
-    /* margin-top: 10em; */
-    bottom: 0;
-  }
-
-  .footer.is-margin {
-    margin: 0;
   }
 }
