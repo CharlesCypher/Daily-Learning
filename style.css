@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 :root {
-  --lightbrown: #f5e6e8;
-  --lightorange: #d5c6e0;
-  --lightpink: #aaa1c8;
-  --lightpurple: #192a51;
-  --darkpurple: #967aa1;
+  --lightbrown: #000000;
+  --lightorange: #808080;
+  --lightpink: #8f8f8f;
+  --lightpurple: #930077;
+  --darkpurple: #ffffff;
   --white: #fefefe;
   --black: #040f0f;
 }
@@ -20,8 +20,21 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  position: relative;
   background-color: var(--lightorange);
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 5px;
 }
 
 a {
@@ -53,16 +66,12 @@ li {
 }
 
 .app-name {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--white);
-  margin: 0.5em;
+  margin: 1em;
 }
 
 .app-name > span {
   font-family: "Poppins", sans-serif;
-  color: var(--lightbrown);
+  color: var(--lightpurple);
   font-weight: 700;
   font-size: 2.5rem;
 }
@@ -150,7 +159,7 @@ input[type="search"] {
 input[type="search"] {
   width: 50%;
   border: none;
-  border: 1px solid var(--lightorange);
+  border: 1px solid var(--black);
   padding: 0.8em;
   font-size: 1rem;
   margin: 1em auto;
@@ -183,7 +192,7 @@ input[type="button"] {
   font-size: 1.2rem;
   margin: 1em auto;
   outline: none;
-  color: var(--lightbrown);
+  color: var(--white);
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
@@ -253,7 +262,7 @@ textarea:focus {
 
 .note-title {
   padding: 0.5em 0 0 1em;
-  color: var(--white);
+  color: var(--black);
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -265,7 +274,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--lightbrown);
+  color: var(--lightorange);
   font-family: "Manrope", sans-serif;
   margin: 0.3em auto;
   padding: 0 2em 2em 1.5em;
@@ -298,7 +307,7 @@ textarea:focus {
     top: 9.65%;
     left: 0;
     width: 30%;
-    border-radius: 0;
+    border-radius: 0 4px 4px 0;
     margin: 2em 2em 0 0;
     border-top: 1px solid var(--lightorange);
   }
