@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 :root {
-  --lightbrown: #000000;
-  --lightorange: #808080;
+  --lightbrown: #222831;
+  --lightorange: #393e46;
   --lightpink: #8f8f8f;
-  --lightpurple: #930077;
+  --lightpurple: #7971ea;
   --darkpurple: #ffffff;
   --white: #fefefe;
-  --black: #040f0f;
+  --black: #222831;
 }
 
 *,
@@ -29,7 +29,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #dddddd;
+  background: #fefefe;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -49,9 +49,9 @@ li {
 }
 
 .app-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .head-wrap {
