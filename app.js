@@ -3,7 +3,7 @@ const hamburger = document.querySelector(".hamburger");
 const dropDown = document.querySelector(".drop-down");
 const form = document.getElementById("formBox");
 const main = document.querySelector(".main");
-const textArea = document.getElementById("textArea");
+const output = document.querySelector(".output");
 const footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click", function () {
@@ -14,18 +14,36 @@ hamburger.addEventListener("click", function () {
 
 let titleInput = document.getElementById("title");
 let noteTitle = document.querySelector(".note-title");
+let textArea = document.getElementById("textArea");
 let noteBody = document.querySelector(".note-body");
 let submit = document.getElementById("submitBtn");
-submit.addEventListener("click", (e) => {
-  e.preventDefault;
+submit.addEventListener("click", () => {
   nt = titleInput.value;
+  ta = textArea.value;
   localStorage.setItem("title", nt);
+  // localStorage.setItem("title", nt);
+  // localStorage.setItem("textArea", ta);
 
   const titleNote = localStorage.getItem("title");
   noteTitle.textContent = titleNote;
-  noteBody.textContent = textArea.value;
+  noteBody.textContent = ta;
+  if (nt && ta) {
+    for (let i = 0; i < localStorage.length; i++) {
+      const title = localStorage.key(i);
+      const nt = localStorage.getItem(title);
+      // const textArea = localStorage.key(i);
+      // const ta = localStorage.getItem(textArea);
+      noteTitle.textContent += `${nt}`;
+      noteBody.textContent += `${ta}`;
+    }
+  }
 });
 
+// if (nt || ta == "") {
+//   output.classList.add("display-none");
+// } else {
+//   output.classList.add("display-block");
+// }
 function storageAvailable(type) {
   var storage;
   try {
