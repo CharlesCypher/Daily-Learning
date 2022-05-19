@@ -158,6 +158,18 @@ input[type="search"] {
   text-transform: uppercase;
 }
 
+.jscolor {
+  border: none;
+  border: 1px solid var(--black);
+  padding: 0.8em;
+  font-size: 1rem;
+  margin: 1.5em auto 0 auto;
+  outline: none;
+  color: var(--lightbrown);
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
 input[type="search"] {
   width: 100%;
   border: none;
@@ -343,10 +355,6 @@ textarea:focus {
     border-radius: 0 4px 4px 0;
     margin: 2em 2em 0 0;
     border-top: 1px solid var(--lightorange);
-  }
-
-  .form.is-active {
-    transform: translateY(0%);
   }
 
   .output-wrap {

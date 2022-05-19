@@ -50,6 +50,27 @@ submit.addEventListener("click", () => {
   noteBody.textContent += `${getYPosition()}`;
 });
 
+var colors = ["#760CE8", "#4782B1", "#E8890C", "#7971EA"];
+
+var changeBackground = function () {
+  submit.style.background = colors[Math.floor(Math.random() * colors.length)];
+};
+
+changeBackground();
+
+new jscolor($(".jscolor").last()[0]);
+
+$(document).ready(function () {
+  $(".add_field_button").click(function (e) {
+    e.preventDefault();
+
+    $("form").append(
+      'Color Picker :  <input class="jscolor" name="c_picker"><br><a href="#" class="remove_field">Remove</a></div>'
+    );
+
+    new jscolor($(".jscolor").last()[0]);
+  });
+});
 // if (nt || ta == "") {
 //   output.classList.add("display-none");
 // } else {
