@@ -132,9 +132,6 @@ main {
   background-color: var(--lightorange);
 }
 
-.side-bar {
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -146,9 +143,9 @@ main {
   transition: all 0.4s ease-in-out;
 }
 
-.form.is-active {
+/* .form.is-active {
   transform: translateY(15%);
-}
+} */
 
 input {
   width: 90%;

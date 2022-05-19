@@ -8,15 +8,16 @@ const footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click", function () {
   // Scroll Position
-  function getYPosition() {
-    var top = window.pageYOffset || document.documentElement.scrollTop;
-    return top;
-  }
-  if (getYPosition() == 0) {
-    form.classList.toggle("is-active");
-  } else {
-    form.classList.remove("is-active");
-  }
+  // function getYPosition() {
+  //   var top = window.pageYOffset || document.documentElement.scrollTop;
+  //   return top;
+  // }
+  // if (getYPosition() == 0) {
+  // form.classList.toggle("is-active");
+  // } else {
+  //   form.classList.remove("is-active");
+  // }
+
   dropDown.classList.toggle("show");
 });
 
