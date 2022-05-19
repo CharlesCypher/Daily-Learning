@@ -124,7 +124,7 @@ li {
 }
 
 main {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: auto;
   margin-top: 8em;
@@ -132,7 +132,7 @@ main {
 }
 
 .side-bar {
-  position: relative;
+  /* position: relative; */
 }
 
 .form {
@@ -162,7 +162,7 @@ input[type="search"] {
 }
 
 input[type="search"] {
-  width: 90%;
+  width: 100%;
   border: none;
   border: 1px solid var(--black);
   padding: 0.8em;
@@ -188,7 +188,7 @@ input[type="search"]:focus {
 
 .searchBtn {
   position: absolute;
-  right: 5%;
+  right: 0%;
   padding: 1em;
   font-size: 0.9rem;
   color: var(--white);
