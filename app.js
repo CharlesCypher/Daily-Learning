@@ -7,9 +7,17 @@ const output = document.querySelector(".output");
 const footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click", function () {
-  form.classList.toggle("is-active");
+  // Scroll Position
+  function getYPosition() {
+    var top = window.pageYOffset || document.documentElement.scrollTop;
+    return top;
+  }
+  if (getYPosition() == 0) {
+    form.classList.toggle("is-active");
+  } else {
+    form.classList.remove("is-active");
+  }
   dropDown.classList.toggle("show");
-  footer.classList.toggle("is-margin");
 });
 
 let titleInput = document.getElementById("title");
@@ -17,6 +25,7 @@ let noteTitle = document.querySelector(".note-title");
 let textArea = document.getElementById("textArea");
 let noteBody = document.querySelector(".note-body");
 let submit = document.getElementById("submitBtn");
+
 submit.addEventListener("click", () => {
   nt = titleInput.value;
   ta = textArea.value;
@@ -37,6 +46,7 @@ submit.addEventListener("click", () => {
       noteBody.textContent += `${ta}`;
     }
   }
+  noteBody.textContent += `${getYPosition()}`;
 });
 
 // if (nt || ta == "") {
@@ -44,35 +54,3 @@ submit.addEventListener("click", () => {
 // } else {
 //   output.classList.add("display-block");
 // }
-function storageAvailable(type) {
-  var storage;
-  try {
-    storage = window[type];
-    var x = "_storage_test_";
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  } catch (e) {
-    return (
-      e instanceof DOMException &&
-      // everything except Firefox
-      (e.code === 22 ||
-        // Firefox
-        e.code === 1014 ||
-        // test name field too, because code might not be present
-        // everything except Firefox
-        e.name === "QuotaExceededError" ||
-        // Firefox
-        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
-      // acknowledge QuotaExceededError only if there's something already stored
-      storage &&
-      storage.length !== 0
-    );
-  }
-}
-
-if (storageAvailable("localStorage")) {
-  console.log("Yippee! We can use localStorage awesomeness");
-} else {
-  console.log("Too bad, no localStorage for us");
-}
